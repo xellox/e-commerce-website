@@ -1,0 +1,359 @@
+:root{
+    --brown-color: #B2945B;
+    --black-color: #0A0A0B;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#navbar{
+    background-color:transparent;
+    height: 80px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    width:100%;     
+    z-index: 999;
+    transition: all 0.2s ease-in-out;
+}
+
+.logoNavbar{
+    background-image: url('images/logo.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    width:70px;
+    height:70px; 
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+#navMenu, .cart{
+    display:flex;
+    font-family: roboto;
+    font-size: clamp(1rem, 0.9423rem + 0.3077vw, 1.25rem);  
+    color: white;
+    cursor:pointer;
+    text-transform: uppercase;
+}
+
+
+#navMenu div{
+    margin:0px 20px 0 20px;
+    padding: 5px;
+}
+
+#navMenu div:hover,
+.cart:hover {
+    background-color: white;
+    border-radius: 2px;
+    color:black;
+}
+
+.cart{
+    margin-right: 100px;
+    font-size: 22px;
+}
+
+#mobileNav{
+    display:none;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    margin:auto;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+
+.background{
+    background-image: url('/images/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width:auto;
+}
+
+.gridHeader {
+    display:grid;
+    position:relative;
+    top:100px;
+    gap:150px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.shopText div {
+    width:450px;
+    margin-bottom:20px;
+}
+
+.textHeader{
+    font-size: 44px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-family: chivo mono;
+    font-weight: 1000;
+    color:White;
+}
+
+.subtextHeader{
+    font-size: 16px;
+    color:white;
+}
+
+.shopNow{
+    min-width:150px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border:none;
+}
+.shopNow:hover{
+    color:white;
+    background-color: var(--black-color);
+}
+
+.imageHeader{
+    background-image:url('/images/main.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:500px;
+    height: 500px;
+}
+
+.gridDesc{
+    display:flex;
+    justify-content: center;
+    padding: 50px;
+    gap:50px;
+    height: fit-content;
+
+}
+
+.gridDesc h2{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.imageAbout{
+    background-image: url('/images/about.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:550px;    
+    height: 350px;
+    border-radius: 10px;
+}
+
+.description div, h2{
+    max-width: 450px;
+    font-family: roboto;
+    border-radius: 10px;
+    max-height: 310px;
+    overflow:hidden
+}
+
+.descBtn{
+    width:150px;
+    height: 50px;
+    font-size: 20px;
+    margin-top:20px;
+    background-color: var(--black-color);
+    color:white;
+    outline:none;
+    border:none;
+    cursor:pointer
+}
+
+.descBtn:hover{
+    background-color: white;
+    color:var(--black-color);
+    border:1px solid var(--black-color)
+}
+
+.headerItems{
+    display:flex;
+    margin:100px;
+    justify-content: center;
+    font-size: 45px;
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+.gridList{
+    display:grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    gap:50px;
+}
+
+.gridItems{
+    display:flex;
+    border:1px solid black;
+    width:300px;
+    height: 300px;
+    box-shadow:3px 3px 15px 3px rgb(183, 183, 183);
+    background-image: url('/images/p1.png');
+    background-size: 300px 250px;
+    background-repeat: no-repeat;
+    cursor:pointer;
+}
+
+.selectButtons{
+    display:flex;
+    position: relative;
+    justify-content:space-between;
+    justify-content: center;
+    align-items:end;
+    margin-bottom: 20px;
+    width:300px;
+    gap:70px;
+}
+
+.priceTag{
+    background-color: var(--black-color);
+    border:2px solid black;;
+    color:white;
+    width:70px;
+    height: 30px;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.addCart{
+    background-color: var(--black-color);
+    border:2px solid black;;
+    color:white;
+    width:70px; 
+    height: 30px;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.addCart:hover{
+    background-color: white;
+    border:2px solid black;;
+    color:black;
+}
+
+.reviews{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+    gap:100px;
+    background-color: var(--black-color);
+    padding: 100px;
+}
+
+.reviewPhoto1{
+    background-image:url('/images/rev1.jpg');
+}
+.reviewPhoto2{
+    background-image:url('/images/rev2.jpg');
+}
+.reviewPhoto3{
+    background-image:url('/images/rev3.jpg');
+}
+
+.revPhoto{
+    display: flex;
+    position: relative;
+    background-size:300px 300px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px 2px rgb(54, 54, 54);
+}
+
+.reviewText{
+    color:white;
+    font-size: 16px;
+    font-family: Poppins;
+    display:flex;
+    position: absolute;
+    text-align: center;
+    bottom: -80px;
+}
+
+.footer{
+    height: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:750px) {
+    #navMenu{
+        position: absolute;
+        flex-direction: column;
+        left:0; 
+        right: 0;
+        top:80px;
+        text-align: center;
+        background-color: rgba(250, 250, 250, 0.749);
+        color:black;
+        width:100%;
+        display:none;
+
+        
+    }
+    #navMenu div{
+        margin:0;
+        padding:12px;
+
+    }
+    #mobileNav{
+        display:flex;
+    }
+    #navMenu div:hover{
+        background-color: var(--black-color);
+        color:white;
+    }
+    .cart{
+        margin-left:50px;
+    }
+}
+
