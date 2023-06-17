@@ -1,7 +1,7 @@
 const products = [
   {
     id: 0,
-    name: "Coffee 1",
+    name: "Coffee&nbsp1",
     price: 29.95,
     instock: 100,
     description:
@@ -12,7 +12,7 @@ const products = [
 
   {
     id: 1,
-    name: "Coffee 2",
+    name: "Coffee&nbsp2",
     price: 27.25,
     instock: 100,
     description:
@@ -22,7 +22,7 @@ const products = [
 
   {
     id: 2,
-    name: "Coffee 3",
+    name: "Coffee&nbsp3",
     price: 33.95,
     instock: 100,
     description:
@@ -32,7 +32,7 @@ const products = [
 
   {
     id: 3,
-    name: "Coffee 4",
+    name: "Coffee&nbsp4",
     price: 25.95,
     instock: 100,
     description:
@@ -42,7 +42,7 @@ const products = [
 
   {
     id: 4,
-    name: "Coffee 5",
+    name: "Coffee&nbsp5",
     price: 37,
     instock: 100,
     description:
@@ -52,7 +52,7 @@ const products = [
 
   {
     id: 5,
-    name: "Coffee 6",
+    name: "Coffee&nbsp6",
     price: 40.99,
     instock: 100,
     description:

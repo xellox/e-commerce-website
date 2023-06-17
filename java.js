@@ -2,30 +2,38 @@
 let mobileHamburger = document.querySelector(".hamburger");
 let navbarMenu = document.querySelector(".navMenu");
 let navbar = document.getElementById("navbar");
-let greyBg = document.querySelector('.greyBg')
+let greyBg = document.querySelector(".greyBg");
+let cartButton = document.querySelector(".cart");
 document.addEventListener("scroll", navbarColor);
-mobileHamburger.addEventListener('click', hamburgerMenu)
-window.addEventListener('resize', adjustNavbarDisplay);
+mobileHamburger.addEventListener("click", hamburgerMenu);
+window.addEventListener("resize", adjustNavbarDisplay);
 
-function hamburgerMenu(){
-    if (navbarMenu.style.display === 'flex'){
-      navbarMenu.style.display = 'none'
-    } else {navbarMenu.style.display = 'flex'}
+function hamburgerMenu() {
+  if (navbarMenu.style.display === "flex") {
+    navbarMenu.style.display = "none";
+  } else {
+    navbarMenu.style.display = "flex";
+  }
 
-    if(navbarMenu.style.display === 'flex'){
-      greyBg.style.display = 'flex'
-    } else {greyBg.style.display = 'none'}
+  if (navbarMenu.style.display === "flex") {
+    greyBg.style.display = "flex";
+    cartButton.style.pointerEvents = "none";
+  } else {
+    greyBg.style.display = "none";
+    cartButton.style.pointerEvents = "all";
+  }
 }
 
 //if u have display none in hamburger menu and resize, the nav is gon change to flex
 function adjustNavbarDisplay() {
-  if (window.innerWidth > 600/* Add your mobile breakpoint value here */) {
-    navbarMenu.style.display = 'flex';
-    greyBg.style.display = 'none'
+  if (window.innerWidth > 600 /* Add your mobile breakpoint value here */) {
+    navbarMenu.style.display = "flex";
+    greyBg.style.display = "none";
   } else {
-    navbarMenu.style.display = 'none';
+    navbarMenu.style.display = "none";
   }
 }
+//make the hamburger menu slide when closing with class toggle//
 
 // change color of navbar when scrolling down, have it transparent on top
 function navbarColor() {
@@ -37,7 +45,6 @@ function navbarColor() {
 }
 
 //DISPLAY SHOPPING CART FUNCTION
-let cartButton = document.querySelector(".cart");
 let cartContainer = document.querySelector(".cartContainer");
 
 function displayCart() {
