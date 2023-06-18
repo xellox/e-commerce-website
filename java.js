@@ -29,8 +29,6 @@ function adjustNavbarDisplay() {
   if (window.innerWidth > 600 /* Add your mobile breakpoint value here */) {
     navbarMenu.style.display = "flex";
     greyBg.style.display = "none";
-  } else {
-    navbarMenu.style.display = "none";
   }
 }
 //make the hamburger menu slide when closing with class toggle//

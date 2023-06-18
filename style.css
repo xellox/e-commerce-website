@@ -222,11 +222,9 @@
 }
 
 .imageAbout {
-  background-image: url("/images/about.jpg");
+  background-image: url("images/about.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  position: relative;
   width: 550px;
   min-width: 250px;
   height: 300px;
