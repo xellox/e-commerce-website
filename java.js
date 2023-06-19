@@ -1,46 +1,51 @@
 //  RESPONSIVE NAVBAR FOR MOBILE
 let mobileHamburger = document.querySelector(".hamburger");
 let navbarMenu = document.querySelector(".navMenu");
-let navbar = document.getElementById("navbar");
+let navMenuMobile = document.querySelector('.navMenuMobile')
 let greyBg = document.querySelector(".greyBg");
 let cartButton = document.querySelector(".cart");
-document.addEventListener("scroll", navbarColor);
 mobileHamburger.addEventListener("click", hamburgerMenu);
-window.addEventListener("resize", adjustNavbarDisplay);
 
+//make the navbar appear and dissappear on button
 function hamburgerMenu() {
-  if (navbarMenu.style.display === "flex") {
-    navbarMenu.style.display = "none";
-  } else {
-    navbarMenu.style.display = "flex";
-  }
-
-  if (navbarMenu.style.display === "flex") {
-    greyBg.style.display = "flex";
-    cartButton.style.pointerEvents = "none";
-  } else {
+  if (navMenuMobile.style.display === "flex") {
+    navMenuMobile.style.display = "none";
     greyBg.style.display = "none";
     cartButton.style.pointerEvents = "all";
+  } else {
+    navMenuMobile.style.display = 'flex'
+    greyBg.style.display = "flex";
+    cartButton.style.pointerEvents = "none";
   }
+
+  
 }
+//close the navbar when you click on a nav-link
+var navLinks = document.getElementsByClassName("nav-link");
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function() {
+    // Call the hamburgerMenu function to hide the navbar
+  
+    navMenuMobile.style.display = 'none'
+    greyBg.style.display = "none";
+    cartButton.style.pointerEvents = "all";
+    
+  });
+}
+
 
 //if u have display none in hamburger menu and resize, the nav is gon change to flex
 function adjustNavbarDisplay() {
   if (window.innerWidth > 600 /* Add your mobile breakpoint value here */) {
-    navbarMenu.style.display = "flex";
+    navMenuMobile.style.display = "none";
     greyBg.style.display = "none";
-  }
+    cartButton.style.pointerEvents = "all";
+  } 
 }
-//make the hamburger menu slide when closing with class toggle//
 
-// change color of navbar when scrolling down, have it transparent on top
-function navbarColor() {
-  if (window.scrollY > 0) {
-    navbar.style.backgroundColor = "black";
-  } else {
-    navbar.style.backgroundColor = "";
-  }
-}
+window.addEventListener("resize", adjustNavbarDisplay)
+
+
 
 //DISPLAY SHOPPING CART FUNCTION
 let cartContainer = document.querySelector(".cartContainer");

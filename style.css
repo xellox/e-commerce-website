@@ -10,6 +10,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color:white;
 }
 /* NAVIGATION BAR */
 
@@ -90,7 +96,9 @@
   align-items: center;
   cursor: pointer;
 }
-
+.navMenuMobile{
+  display:none;
+}
 .greyBg {
   display: none;
   background-color: black;
@@ -107,7 +115,6 @@
 /* PNG BACKGROUND */
 .background {
   background-image: url("images/background.jpg");
-
   background-size: cover;
   width: 100vw;
   background-repeat: no-repeat;
@@ -221,6 +228,7 @@
   border: 1px solid var(--black-color);
 }
 
+
 .imageAbout {
   background-image: url("images/about.jpg");
   background-size: cover;
@@ -232,6 +240,7 @@
 }
 
 /* products section */
+
 .headerItems {
   display: flex;
   margin: 50px;
@@ -566,19 +575,18 @@ textarea {
 }
 
 /*footer copyrigt statement*/
-.footer a {
+#footer a {
   color: #555;
   text-decoration: none;
   font-size: 14px;
 }
-.footer p {
+#footer p {
   font-size: 14px;
   text-align: center;
   padding: 10px 0 10px 0;
   background-color: #ebebeb;
 }
-
-.footer a:hover {
+#footer a:hover {
   text-decoration: underline;
 }
 
@@ -586,7 +594,10 @@ textarea {
 
 @media (max-width: 600px) {
   /*navbar hamburger menu */
-  .navMenu {
+  .navMenu{
+    display:none;
+  }
+  .navMenuMobile {
     display: none;
     position: absolute;
     flex-direction: column;
@@ -594,10 +605,10 @@ textarea {
     left: 0;
     width: 80vw;
     gap: 0px;
-    animation: hamburgerSlideIn 0.1s ease-in-out;
+    animation: hamburgerSlideIn 0.1s ease-in;
   }
 
-  .navMenu div {
+  .navMenuMobile div {
     color: rgb(79, 79, 79);
     background-color: rgb(230, 230, 230);
     border-bottom: 1px solid rgb(201, 201, 201);
@@ -606,7 +617,7 @@ textarea {
     align-items: flex-start;
     transition: all 0.1s ease-in-out;
   }
-  .nav .navMenu div:hover {
+  .navMenuMobile div:hover {
     background-color: rgb(240, 240, 240);
     padding-left: 20px;
   }
@@ -684,8 +695,8 @@ textarea {
     display: none;
   }
 
-  .footer a,
-  .footer p {
+  #footer a,
+  #footer p {
     font-size: 10px;
   }
 

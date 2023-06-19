@@ -35,10 +35,16 @@
           <div class="logoNavbar">your<span>Name</span></div>
         </div>
         <div class="navMenu">
-          <div>Home</div>
-          <div>About&nbsp;us</div>
-          <div>Products</div>
-          <div>Contact</div>
+          <a href="#navigation"><div class="nav-link">Home</div></a>
+          <a href="#about"><div class="nav-link">About&nbspUs</div></a>
+          <a href="#shopItems"><div class="nav-link">Products</div></a>
+          <a href="#footer"><div class="nav-link">Contact</div></a>
+        </div>
+        <div class="navMenuMobile">
+          <a href="#navigation"><div class="nav-link">Home</div></a>
+          <a href="#about"><div class="nav-link">About&nbspUs</div></a>
+          <a href="#shopItems"><div class="nav-link">Products</div></a>
+          <a href="#footer"><div class="nav-link">Contact</div></a>
         </div>
         <div class="cart" onclick="displayCart()">
           <svg
@@ -60,7 +66,7 @@
       </nav>
     </section>
     <div class="greyBg"></div>
-    <section class="header">
+
       <div class="background">
         <div class="gridHeader">
           <div class="shopText">
@@ -71,14 +77,13 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
               suscipit illum tempora veritatis aliquam!
             </div>
-            <div class="shopNow">SHOP NOW</div>
+            <a href="#shopItems"><div class="shopNow nav-link">SHOP NOW</div></a>
           </div>
           <div class="imageHeader"></div>
         </div>
       </div>
-    </section>
 
-    <section class="about">
+    <section id="about"> </section>
       <div class="gridDesc">
         <div class="imageAbout"></div>
         <div class="description">
@@ -94,14 +99,16 @@
           <button class="descBtn">Learn more</button>
         </div>
       </div>
-    </section>
+   
 
-    <section class="shopItems">
+    <section id="shopItems">
+
       <div class="headerItems">Our products</div>
+      
       <div class="gridList"><!-- content goes here from JS --></div>
     </section>
 
-    <section class="footer">
+    <section id="footer">
       <div class="footerContainer">
         <div class="f-Connect">
           <div class="connectTitle">CONNECT</div>
