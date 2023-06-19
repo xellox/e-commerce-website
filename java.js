@@ -1,7 +1,7 @@
 //  RESPONSIVE NAVBAR FOR MOBILE
 let mobileHamburger = document.querySelector(".hamburger");
 let navbarMenu = document.querySelector(".navMenu");
-let navMenuMobile = document.querySelector('.navMenuMobile')
+let navMenuMobile = document.querySelector(".navMenuMobile");
 let greyBg = document.querySelector(".greyBg");
 let cartButton = document.querySelector(".cart");
 mobileHamburger.addEventListener("click", hamburgerMenu);
@@ -13,39 +13,32 @@ function hamburgerMenu() {
     greyBg.style.display = "none";
     cartButton.style.pointerEvents = "all";
   } else {
-    navMenuMobile.style.display = 'flex'
+    navMenuMobile.style.display = "flex";
     greyBg.style.display = "flex";
     cartButton.style.pointerEvents = "none";
   }
-
-  
 }
 //close the navbar when you click on a nav-link
 var navLinks = document.getElementsByClassName("nav-link");
 for (var i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click", function() {
+  navLinks[i].addEventListener("click", function () {
     // Call the hamburgerMenu function to hide the navbar
-  
-    navMenuMobile.style.display = 'none'
-    greyBg.style.display = "none";
-    cartButton.style.pointerEvents = "all";
-    
-  });
-}
-
-
-//if u have display none in hamburger menu and resize, the nav is gon change to flex
-function adjustNavbarDisplay() {
-  if (window.innerWidth > 600 /* Add your mobile breakpoint value here */) {
     navMenuMobile.style.display = "none";
     greyBg.style.display = "none";
     cartButton.style.pointerEvents = "all";
-  } 
+  });
 }
 
-window.addEventListener("resize", adjustNavbarDisplay)
+//check the width and reset the navmenu for desktop size on breakpoint
+window.addEventListener("resize", adjustNavbarDisplay);
 
-
+function adjustNavbarDisplay() {
+  if (window.innerWidth > 600) {
+    navMenuMobile.style.display = "none";
+    greyBg.style.display = "none";
+    cartButton.style.pointerEvents = "all";
+  }
+}
 
 //DISPLAY SHOPPING CART FUNCTION
 let cartContainer = document.querySelector(".cartContainer");
@@ -54,6 +47,28 @@ function displayCart() {
   if (cartContainer.style.display == "flex") {
     cartContainer.style.display = "none";
   } else cartContainer.style.display = "flex";
+}
+
+// email form working in footer section
+
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+
+function sendEmail() {
+  let ebody = `
+  <b>Email: </b>${email.value}
+  <br>
+  <br>
+  <b>Message: </b>${message.value}
+  `;
+
+  Email.send({
+    SecureToken: "4c85d3fa-45be-4a90-95ae-1d08e22c32dd",
+    To: "korpasdarius911@gmail.com",
+    From: "korpasdarius911@gmail.com",
+    Subject: "Email via e-commerce website from " + email.value,
+    Body: ebody,
+  }).then((message) => alert("Email sent!"));
 }
 
 //RENDER SHOPPING CART AND ADD ITEMS TO CART
@@ -65,7 +80,7 @@ const subTotal = document.querySelector(".totalItems");
 const subTotalPrice = document.querySelector(".totalPrice");
 const emptyCart = document.querySelector(".emptyCart");
 const cartNumber = document.querySelector(".cartNumber");
-//get cart from local storage and have the functions updated on reload page
+//get cart from local storage(set it to local storage in updateCart() function) and have the functions updated on reload page
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 renderCartItems();
 renderSubTotal();
@@ -128,7 +143,6 @@ function renderSubTotal() {
   cartNumber.innerHTML = `${totalItems}`;
 }
 
-//add the specific item to cart for each product clicked
 function renderCartItems() {
   //display "cart is empty" if the cart has no products
   if (cart.length === 0) {
@@ -181,7 +195,11 @@ function changeNumberOfUnits(action, id) {
         numberOfUnits--;
       } else if (action === "plus") {
         numberOfUnits++;
+      } else if (action === "minus" && numberOfUnits === 1) {
+        // Remove the item from the cart
+        return null;
       }
+
     }
 
     return {
@@ -189,12 +207,12 @@ function changeNumberOfUnits(action, id) {
       numberOfUnits,
     };
   });
+  cart = cart.filter(item => item !== null);
   updateCart();
 }
+
 //remove items from cart by filtering the array
 function removeCartItems(id) {
   cart = cart.filter((item) => item.id !== id);
   updateCart();
 }
-
-// HOVER EFFECT ON PRODUCTS FOR ADD TO CART  //

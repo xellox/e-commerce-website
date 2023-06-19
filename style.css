@@ -13,9 +13,9 @@
   scroll-behavior: smooth;
 }
 
-a{
+a {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 /* NAVIGATION BAR */
 
@@ -29,7 +29,6 @@ a{
   text-align: center;
   position: fixed;
   z-index: 999;
-  transition: all 0.2s ease-in-out;
   padding: 30px;
 }
 .logoNavbar {
@@ -42,15 +41,13 @@ a{
 
 .navMenu {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   color: white;
-  cursor: pointer;
   text-transform: uppercase;
   font-size: clamp(0.5rem, 0.75rem + 0.6077vw, 1.5rem);
 }
 .navMenu div {
   font-family: Roboto;
-  padding: 5px;
 }
 
 .cart {
@@ -62,9 +59,7 @@ a{
 
 .navMenu div:hover,
 .cart:hover {
-  background-color: white;
-  border-radius: 2px;
-  color: black;
+  color: rgb(180, 180, 180);
 }
 
 /* red dot above cart icon with amount of items in the cart */
@@ -96,8 +91,8 @@ a{
   align-items: center;
   cursor: pointer;
 }
-.navMenuMobile{
-  display:none;
+.navMenuMobile {
+  display: none;
 }
 .greyBg {
   display: none;
@@ -110,7 +105,7 @@ a{
   z-index: 4;
   pointer-events: stroke;
   opacity: 0.7;
-  animation: opacity 0.1s ease-in;
+  animation: opacity 0.2s ease-in;
 }
 /* PNG BACKGROUND */
 .background {
@@ -119,7 +114,6 @@ a{
   width: 100vw;
   background-repeat: no-repeat;
   height: 1000px;
-
 }
 
 /* main text + coffe mug section*/
@@ -165,14 +159,13 @@ a{
   height: 50px;
   font-weight: 500;
   font-size: 16px;
-  cursor: pointer;
   color: white;
   background-color: rgba(0, 0, 0, 0.914);
 }
 
 .shopNow:hover {
   background-color: var(--black-color);
-  border: 1px solid white;
+  border: 1px solid rgb(100, 100, 100);
 }
 /* make the coffe mug image responsive */
 .imageHeader {
@@ -223,11 +216,8 @@ a{
 }
 
 .descBtn:hover {
-  background-color: white;
-  color: var(--black-color);
-  border: 1px solid var(--black-color);
+  background-color: rgb(30, 30, 30);
 }
-
 
 .imageAbout {
   background-image: url("images/about.jpg");
@@ -594,8 +584,8 @@ textarea {
 
 @media (max-width: 600px) {
   /*navbar hamburger menu */
-  .navMenu{
-    display:none;
+  .navMenu {
+    display: none;
   }
   .navMenuMobile {
     display: none;
@@ -605,7 +595,7 @@ textarea {
     left: 0;
     width: 80vw;
     gap: 0px;
-    animation: hamburgerSlideIn 0.1s ease-in;
+    animation: hamburgerSlideIn 0.2s ease-in;
   }
 
   .navMenuMobile div {
@@ -703,7 +693,7 @@ textarea {
   /* cart display */
   .cartContainer {
     width: 300px;
-    height: 100%;
+    min-height: 240px;
     max-height: 310px;
     animation: cartAnimationMobile 0.2s ease-in;
   }
@@ -726,7 +716,7 @@ textarea {
   }
   .price {
     font-size: 14px;
-    width: 50px;
+    width: 45px;
   }
   .itemPhoto {
     width: 50px;
@@ -750,8 +740,6 @@ textarea {
     transform: scale(0.8);
   }
 }
-
-
 
 /*keyframes animation */
 @keyframes hamburgerSlideIn {

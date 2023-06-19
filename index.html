@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="hacker.png">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,10 +36,10 @@
           <div class="logoNavbar">your<span>Name</span></div>
         </div>
         <div class="navMenu">
-          <a href="#navigation"><div class="nav-link">Home</div></a>
-          <a href="#about"><div class="nav-link">About&nbspUs</div></a>
-          <a href="#shopItems"><div class="nav-link">Products</div></a>
-          <a href="#footer"><div class="nav-link">Contact</div></a>
+          <a href="#navigation"><div>Home</div></a>
+          <a href="#about"><div>About&nbspUs</div></a>
+          <a href="#shopItems"><div>Products</div></a>
+          <a href="#footer"><div>Contact</div></a>
         </div>
         <div class="navMenuMobile">
           <a href="#navigation"><div class="nav-link">Home</div></a>
@@ -67,44 +68,42 @@
     </section>
     <div class="greyBg"></div>
 
-      <div class="background">
-        <div class="gridHeader">
-          <div class="shopText">
-            <div class="textHeader">
-              Start&nbsp;your&nbsp;day <br />with&nbsp;coffee.
-            </div>
-            <div class="subtextHeader">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-              suscipit illum tempora veritatis aliquam!
-            </div>
-            <a href="#shopItems"><div class="shopNow nav-link">SHOP NOW</div></a>
+    <div class="background">
+      <div class="gridHeader">
+        <div class="shopText">
+          <div class="textHeader">
+            Start&nbsp;your&nbsp;day <br />with&nbsp;coffee.
           </div>
-          <div class="imageHeader"></div>
+          <div class="subtextHeader">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+            suscipit illum tempora veritatis aliquam!
+          </div>
+          <a href="#shopItems"><div class="shopNow nav-link">SHOP NOW</div></a>
         </div>
+        <div class="imageHeader"></div>
       </div>
+    </div>
 
-    <section id="about"> </section>
-      <div class="gridDesc">
-        <div class="imageAbout"></div>
-        <div class="description">
-          <h2>OUR HISTORY</h2>
-          <div class="descAbout">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, magnam
-            architecto provident libero reiciendis quaerat nostrum molestiae?
-            Facilis praesentium consectetur iure dolor. Totam quae alias odio
-            hic, aut eveniet quis?
-          </div>
-          <button class="descBtn">Learn more</button>
+    <section id="about"></section>
+    <div class="gridDesc">
+      <div class="imageAbout"></div>
+      <div class="description">
+        <h2>OUR HISTORY</h2>
+        <div class="descAbout">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <br /><br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, magnam
+          architecto provident libero reiciendis quaerat nostrum molestiae?
+          Facilis praesentium consectetur iure dolor. Totam quae alias odio hic,
+          aut eveniet quis?
         </div>
+        <button class="descBtn">Learn more</button>
       </div>
-   
+    </div>
 
     <section id="shopItems">
-
       <div class="headerItems">Our products</div>
-      
+
       <div class="gridList"><!-- content goes here from JS --></div>
     </section>
 
@@ -262,6 +261,7 @@
       <div class="checkout">proceed to checkout</div>
     </div>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="products.js"></script>
     <script src="java.js"></script>
   </body>
